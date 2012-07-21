@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         id="application"
+         point="org.eclipse.core.runtime.applications">
+      <application>
+         <run
+               class="org.education.multichoicesystem.rcp.Application">
+         </run>
+      </application>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            name="RCP Perspective"
+            class="org.education.multichoicesystem.rcp.Perspective"
+            id="org.education.multichoicesystem.rcp.perspective">
+      </perspective>
+   </extension>
+   <extension
+         id="product"
+         point="org.eclipse.core.runtime.products">
+      <product
+            application="org.education.multichoicesystem.rcp.application"
+            name="QCM Application - Prototype Version">
+         <property
+               name="windowImages"
+               value="icons/alt_window_16.gif,icons/alt_window_32.gif">
+         </property>
+         <property
+               name="appName"
+               value="QCM Application - Prototype Version">
+         </property>
+         <property
+               name="aboutText"
+               value="Florian Barbin&#x0A;&#x0A;For Demonstration Only&#x0A;Version 0.1 (Prototype)">
+         </property>
+         <property
+               name="startupForegroundColor"
+               value="000000">
+         </property>
+         <property
+               name="startupMessageRect"
+               value="7,252,445,20">
+         </property>
+         <property
+               name="startupProgressRect"
+               value="5,275,445,15">
+         </property>
+         <property
+               name="preferenceCustomization"
+               value="plugin_customization.ini">
+         </property>
+      </product>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            locationURI="menu:org.eclipse.ui.main.menu">
+         <menu
+               label="Fichier">
+            <command
+                  commandId="org.eclipse.ui.newWizard"
+                  label="Nouveau ..."
+                  style="push">
+            </command>
+            <command
+                  commandId="org.eclipse.ui.edit.text.openLocalFile"
+                  label="Ouvrir"
+                  style="push">
+            </command>
+            <command
+                  commandId="org.eclipse.ui.file.exit"
+                  label="Quitter">
+            </command>
+         </menu>
+         <menu
+               label="Aide">
+            <command
+                  commandId="org.eclipse.ui.help.aboutAction"
+                  label="A Propos..."
+                  style="push">
+            </command>
+         </menu>
+      </menuContribution>
+   </extension>
+
+</plugin>

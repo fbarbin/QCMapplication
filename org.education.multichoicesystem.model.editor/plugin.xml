@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ <copyright>
+ </copyright>
+
+ $Id$
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="org.education.multichoicesystem.model.multichoicesystem.presentation.multichoicesystemModelWizardID"
+            name="%_UI_multichoicesystemModelWizard_label"
+            class="org.education.multichoicesystem.model.multichoicesystem.presentation.MultichoicesystemModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/multichoicesystemModelFile.gif">
+         <description>%_UI_multichoicesystemModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+      <wizard
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            class="org.education.multichoicesystem.model.multichoicesystem.presentation.SpecificMultichoicesystemModelWizard"
+            icon="icons/full/obj16/multichoicesystemModelFile.gif"
+            id="org.education.multichoicesystem.model.multichoicesystem.presentation.multichoicesystemModelWizardID2"
+            name="%_UI_multichoicesystemModelWizard_label">
+         <description>
+            %_UI_multichoicesystemModelWizard_description
+         </description>
+         <selection
+               class="org.eclipse.core.resources.IResource">
+         </selection>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <editor
+            id="org.education.multichoicesystem.model.multichoicesystem.presentation.MultichoicesystemEditorID"
+            name="%_UI_multichoicesystemEditor_label"
+            icon="icons/full/obj16/multichoicesystemModelFile.gif"
+            extensions="multichoicesystem"
+            class="org.education.multichoicesystem.model.multichoicesystem.presentation.MultichoicesystemEditor"
+            contributorClass="org.education.multichoicesystem.model.multichoicesystem.presentation.MultichoicesystemActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>
