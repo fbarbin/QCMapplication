@@ -1240,7 +1240,7 @@ public class MultichoicesystemEditor extends MultiPageEditorPart implements
 
 			getSite().getShell().getDisplay().asyncExec(new Runnable() {
 				public void run() {
-					setActivePage(0);
+					setActivePage(1);
 				}
 			});
 		}
