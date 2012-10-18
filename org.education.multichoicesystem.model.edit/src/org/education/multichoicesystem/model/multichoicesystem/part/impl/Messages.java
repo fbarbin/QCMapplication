@@ -7,8 +7,6 @@ public class Messages extends NLS {
 	public static String MultipleChoiceEditingPart_name;
 	public static String MultipleChoiceInstEditingPart_validate;
 	public static String SystemEditingPart_admin;
-	public static String SystemEditingPart_connection;
-	public static String SystemEditingPart_home;
 	public static String SystemEditingPart_pwd;
 	public static String SystemEditingPart_user;
 	public static String SystemEditingPart_userName;

@@ -14,7 +14,6 @@ import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Listener;
 import org.education.multichoicesystem.model.multichoicesystem.MultipleChoiceInst;
 import org.education.multichoicesystem.model.multichoicesystem.User;
-import org.education.multichoicesystem.model.multichoicesystem.api.AbstractEditingPart;
 import org.education.multichoicesystem.model.multichoicesystem.api.IEditingPart;
 import org.education.multichoicesystem.model.multichoicesystem.api.IEditingPartCallBack;
 

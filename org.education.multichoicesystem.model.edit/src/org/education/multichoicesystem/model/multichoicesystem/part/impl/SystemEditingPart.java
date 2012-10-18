@@ -14,7 +14,6 @@ import org.eclipse.swt.widgets.Text;
 import org.education.multichoicesystem.model.multichoicesystem.Administrator;
 import org.education.multichoicesystem.model.multichoicesystem.System;
 import org.education.multichoicesystem.model.multichoicesystem.User;
-import org.education.multichoicesystem.model.multichoicesystem.api.AbstractEditingPart;
 import org.education.multichoicesystem.model.multichoicesystem.api.IEditingPart;
 import org.education.multichoicesystem.model.multichoicesystem.api.IEditingPartCallBack;
 
@@ -94,6 +93,9 @@ public class SystemEditingPart extends AbstractEditingPart {
 
 			{
 				Button buttonAdmin = new Button(mainPageContent, SWT.PUSH);
+
+				buttonAdmin
+						.setImage(getImageFromName("48px-Crystal_Clear_app_kuser.png"));
 				buttonAdmin.setText(Messages.SystemEditingPart_admin);
 				GridData buttonAdminData = new GridData(SWT.RIGHT, SWT.CENTER,
 						true, true, 1, 1);
@@ -111,6 +113,8 @@ public class SystemEditingPart extends AbstractEditingPart {
 			{
 				Button buttonUser = new Button(mainPageContent, SWT.PUSH);
 				buttonUser.setText(Messages.SystemEditingPart_user);
+				buttonUser
+						.setImage(getImageFromName("48px-Crystal_Clear_app_personal.png"));
 				GridData buttonUserData = new GridData(SWT.LEFT, SWT.CENTER,
 						true, true, 1, 1);
 				buttonUser.setLayoutData(buttonUserData);
@@ -181,11 +185,7 @@ public class SystemEditingPart extends AbstractEditingPart {
 
 				// connection button
 				{
-					final Button buttonUser = new Button(userConnection,
-							SWT.PUSH);
-					buttonUser.setText(Messages.SystemEditingPart_connection);
-					GridData buttonUserData = new GridData();
-					buttonUser.setLayoutData(buttonUserData);
+					final Button buttonUser = createConnectionButton(userConnection);
 					buttonUser.addListener(SWT.Selection, new Listener() {
 
 						@Override
@@ -199,8 +199,7 @@ public class SystemEditingPart extends AbstractEditingPart {
 			}
 			// home button
 			{
-				Button homeButton = new Button(mainUserPage, SWT.PUSH);
-				homeButton.setText(Messages.SystemEditingPart_home);
+				Button homeButton = createHomeButton(mainUserPage);
 				homeButton.addListener(SWT.Selection, new Listener() {
 
 					@Override
@@ -267,11 +266,7 @@ public class SystemEditingPart extends AbstractEditingPart {
 
 				// connection button
 				{
-					final Button buttonUser = new Button(userConnection,
-							SWT.PUSH);
-					buttonUser.setText(Messages.SystemEditingPart_connection);
-					GridData buttonUserData = new GridData();
-					buttonUser.setLayoutData(buttonUserData);
+					final Button buttonUser = createConnectionButton(userConnection);
 					buttonUser.addListener(SWT.Selection, new Listener() {
 
 						@Override
@@ -285,8 +280,7 @@ public class SystemEditingPart extends AbstractEditingPart {
 			}
 			// home button
 			{
-				Button homeButton = new Button(mainUserPage, SWT.PUSH);
-				homeButton.setText(Messages.SystemEditingPart_home);
+				Button homeButton = createHomeButton(mainUserPage);
 				homeButton.addListener(SWT.Selection, new Listener() {
 
 					@Override

@@ -6,7 +6,6 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Label;
 import org.education.multichoicesystem.model.multichoicesystem.Answer;
 import org.education.multichoicesystem.model.multichoicesystem.StatementInst;
-import org.education.multichoicesystem.model.multichoicesystem.api.AbstractEditingPart;
 import org.education.multichoicesystem.model.multichoicesystem.api.IEditingPart;
 
 /**

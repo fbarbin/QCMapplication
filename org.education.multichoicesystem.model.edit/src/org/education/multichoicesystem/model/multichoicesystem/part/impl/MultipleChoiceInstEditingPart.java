@@ -12,7 +12,6 @@ import org.eclipse.swt.widgets.Listener;
 import org.eclipse.swt.widgets.ProgressBar;
 import org.education.multichoicesystem.model.multichoicesystem.MultipleChoiceInst;
 import org.education.multichoicesystem.model.multichoicesystem.StatementInst;
-import org.education.multichoicesystem.model.multichoicesystem.api.AbstractEditingPart;
 import org.education.multichoicesystem.model.multichoicesystem.api.IEditingPart;
 
 /**

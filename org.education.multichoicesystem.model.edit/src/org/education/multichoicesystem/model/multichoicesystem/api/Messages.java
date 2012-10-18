@@ -6,6 +6,8 @@ public class Messages extends NLS {
 	private static final String BUNDLE_NAME = "org.education.multichoicesystem.model.multichoicesystem.api.messages"; //$NON-NLS-1$
 	public static String AbstractEditingPart_error_1;
 	public static String AbstractEditingPart_error_2;
+	public static String SystemEditingPart_home;
+	public static String SystemEditingPart_connection;
 	static {
 		// initialize resource bundle
 		NLS.initializeMessages(BUNDLE_NAME, Messages.class);

@@ -14,7 +14,6 @@ import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Listener;
 import org.education.multichoicesystem.model.multichoicesystem.Administrator;
 import org.education.multichoicesystem.model.multichoicesystem.MultipleChoiceInst;
-import org.education.multichoicesystem.model.multichoicesystem.api.AbstractEditingPart;
 
 public class AdministratorEditingPart extends AbstractEditingPart {
 

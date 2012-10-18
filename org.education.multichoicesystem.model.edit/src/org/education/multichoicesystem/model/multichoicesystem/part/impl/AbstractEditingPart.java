@@ -1,4 +1,4 @@
-package org.education.multichoicesystem.model.multichoicesystem.api;
+package org.education.multichoicesystem.model.multichoicesystem.part.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.Notifier;
@@ -12,10 +12,14 @@ import org.eclipse.swt.graphics.Font;
 import org.eclipse.swt.graphics.Image;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
+import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Control;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Label;
+import org.education.multichoicesystem.model.multichoicesystem.api.IEditingPart;
+import org.education.multichoicesystem.model.multichoicesystem.api.IEditingPartCallBack;
+import org.education.multichoicesystem.model.multichoicesystem.api.Messages;
 import org.education.multichoicesystem.model.multichoicesystem.part.provider.MultichoicesystemEditingPartAdapterFactory;
 import org.education.multichoicesystem.model.multichoicesystem.provider.MultichoiceEditPlugin;
 
@@ -143,16 +147,37 @@ public abstract class AbstractEditingPart implements IEditingPart {
 		{
 			Label img = new Label(header, SWT.NONE);
 			img.setLayoutData(new GridData(SWT.RIGHT, SWT.TOP, true, true));
-			Object imageDesc = getResourceLocator().getImage(
-					"header.png");
+			Object imageDesc = getResourceLocator().getImage("header.png");
 			Image image = ExtendedImageRegistry.INSTANCE.getImage(imageDesc);
 			img.setImage(image);
 		}
 		return header;
 	}
 
-	private ResourceLocator getResourceLocator() {
+	protected ResourceLocator getResourceLocator() {
 		return MultichoiceEditPlugin.INSTANCE;
+	}
+
+	protected Image getImageFromName(String string) {
+		Object imageDesc = getResourceLocator().getImage(string);
+		return ExtendedImageRegistry.INSTANCE.getImage(imageDesc);
+	}
+
+	protected Button createHomeButton(Composite parent) {
+		Button homeButton = new Button(parent, SWT.PUSH);
+		homeButton.setText(Messages.SystemEditingPart_home);
+		homeButton
+				.setImage(getImageFromName("48px-Crystal_Clear_app_kfm_home.png"));
+		return homeButton;
+	}
+
+	protected Button createConnectionButton(Composite userConnection) {
+		final Button buttonUser = new Button(userConnection, SWT.PUSH);
+		buttonUser.setText(Messages.SystemEditingPart_connection);
+		GridData buttonUserData = new GridData();
+		buttonUser.setLayoutData(buttonUserData);
+		buttonUser.setImage(getImageFromName("checkmark_32.png"));
+		return buttonUser;
 	}
 
 }
